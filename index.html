@@ -8,12 +8,35 @@
 </head>
 <body>
     <div class="bg">
-        <h1>Random Text</h1>
+        <h1>Anime in 4k</h1>
         <video class="video-bg" autoplay muted loop>
             <source src="video/video.mp4" 
                     type="video/mp4">
         </video>
     </div>
+
+    <main>
+        <h2>Responsive using srcset only</h2>
+
+        <img
+            srcset="
+                images/1.avif   600w,
+                images/1.avif   960w,
+                images/1.avif 1280w
+            "
+            sizes="calc(100vw - 16px)"
+            src="images/1.avif"
+            alt="responsive demo using srcset attribute"
+        />
+    </main>
+    <h2>SVG image with gradient effect</h2>
+
     
+    <picture>
+        <source media="(min-width:720px)" srcset="images/anime.svg" />
+        <source media="(max-width:719px)" srcset="images/anime.svg" />
+        <img class="grad" src="images/anime.svg" alt="graphics" />
+    </picture>
+
 </body>
 </html>
